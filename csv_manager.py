@@ -10,7 +10,7 @@ def save_csv(inventory, route, header=True):
          writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
          if header : writer.writeheader()
          writer.writerows(inventory)
-      return f"Inventory stored in: {route}"
+      return f"\nInventory stored in: {route}"
 
    except FileExistsError :
       print("The csv file could not be saved")

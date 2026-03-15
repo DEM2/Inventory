@@ -15,8 +15,9 @@ def  record_sales (inventory):
     print("\n Sale recorded successfully ✅")
 
 def display(inventory):
-    print(inventory)
-
+    for product in inventory:
+        print(f"Product: {product['Product']} | Price per unit: {product['Price_per_unit']} | Amount: {product['Amount']}")
+        
 def search(inventory, message) :
     name= get_non_empty_text(message)
     for producto in inventory:
@@ -29,7 +30,7 @@ def update_product(inventory, name, price=0, quantity=0):
         if product['Product']== name :
             product['Price_per_unit']= price
             product['Amount']= quantity
-            return("update successfully ✅", product)
+            return(f"{product['Product']} update successfully ✅")
     return "Any product was found"
 
 def delete_product (inventory, name):

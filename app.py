@@ -27,8 +27,11 @@ while to_continue :
         match opcion:
              case 1:
               record_sales(inventory) 
-             case 2: 
-              display(inventory)
+             case 2:
+              if not inventory:
+                 print("The inventory is empty")
+              else: 
+                 display(inventory)
              case 3:
    
                result= search(inventory, "\n ¿What product are you looking for?: ")
@@ -43,6 +46,7 @@ while to_continue :
                   new_price = get_positive_number("\n Enter the new price per unit: ")
                   new_quantity = get_positive_number("\n How many units?: ")
                   print(update_product(inventory,name, new_price, new_quantity))
+                  
              case 5:
               name = get_non_empty_text("\n Name of the product to be remove: ")
               print(delete_product(inventory, name))
