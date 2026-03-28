@@ -24,6 +24,15 @@ The project is organized into the following files:
 - **csv_manager.py**  
   Manages data persistence by handling reading from and writing to CSV files.
 
+## Data Files
+
+The system uses CSV files to store inventory data.
+
+- `inventory.csv` → Main file used to store product data  
+- `new_inventory.csv` → Default inventory file from which information is loaded via the code in the project
+
+Both files are located in the project's root directory.
+
 ## Sample Data
 
 | Product | Price per Unit | Amount |
